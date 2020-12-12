@@ -17,16 +17,20 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: azkaoru
+    repository: jx3-beta-k8s
   - key: staging
   - key: production
   ingress:
-    domain: "cloudapps.dev.example.com"
+    domain: cloudapps.dev.example.com
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: azkaoru
   repository: bucketrepo
   secretStorage: local
   vault: {}
