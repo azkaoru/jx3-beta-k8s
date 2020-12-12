@@ -2,3 +2,11 @@
 jx:
   imagePullSecrets:
     - tekton-container-registry-auth
+jx-git-operator:
+  env:
+  - name: https_proxy
+    value: "172.19.0.3:8080"
+  - name: http_proxy
+    value: "172.19.0.3:8080"
+  - name: no_proxy
+    value: ".dev.example.com"

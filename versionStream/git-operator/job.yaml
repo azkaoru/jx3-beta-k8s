@@ -24,6 +24,12 @@ spec:
         env:
         - name: XDG_CONFIG_HOME
           value: /workspace/xdg_config
+        - name: https_proxy
+          value: 172.19.0.3:8080
+        - name: http_proxy
+          value: 172.19.0.3:8080
+        - name: no_proxy
+          value: ".dev.example.com,10.96.0.1"
         image: gcr.io/jenkinsxio/jx-boot:3.1.18
         name: git-clone
         volumeMounts:
@@ -38,6 +44,12 @@ spec:
         env:
         - name: XDG_CONFIG_HOME
           value: /workspace/xdg_config
+        - name: https_proxy
+          value: 172.19.0.3:8080
+        - name: http_proxy
+          value: 172.19.0.3:8080
+        - name: no_proxy
+          value: ".dev.example.com,10.96.0.1"
         image: gcr.io/jenkinsxio/jx-boot:3.1.18
         imagePullPolicy: Always
         name: job
